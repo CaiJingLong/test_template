@@ -13,4 +13,6 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: auto-label-flutter
-        uses: flutter-fix-something/auto-label-action@0.0.3
+        uses: flutter-fix-something/auto-label-action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
