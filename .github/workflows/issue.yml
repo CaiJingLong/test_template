@@ -1,0 +1,16 @@
+name: "build-test"
+on:
+  pull_request:
+    branches:
+      - main
+  issues:
+    types: [opened, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: auto-label-flutter
+        uses: flutter-fix-something/auto-label-action@0.0.2
