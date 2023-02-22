@@ -1,0 +1,15 @@
+name: "Check pull request changelog file"
+on:
+  pull_request:
+    branches:
+      - main
+  issue_comment:
+    types: [created, edited]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cfug/dio_action_check_changelog@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
