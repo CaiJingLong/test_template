@@ -1,2 +1,1 @@
-# 
-Just test
+# Test workflows or issue template
